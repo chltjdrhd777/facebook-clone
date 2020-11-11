@@ -129,6 +129,17 @@ const Div = styled.div`
       border-bottom: 4px solid #2e81f4;
     }
   }
+
+  & .header_right {
+    display: flex;
+    & .header_info {
+      display: flex;
+      align-items: center;
+      & h4 {
+        margin-left: 10px;
+      }
+    }
+  }
 `;
 
 export default Header;
