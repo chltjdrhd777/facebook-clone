@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { Avatar, Input } from "@material-ui/core";
 import { useState } from "react";
 import AttachmentIcon from "@material-ui/icons/Attachment";
+import Videocam from "@material-ui/icons/Videocam";
+import PhotoLibaray from "@material-ui/icons/PhotoLibrary";
+import InsertEmotion from "@material-ui/icons/InsertEmoticon";
 
 function MessageSender() {
   const [input, setInput] = useState("");
@@ -55,6 +58,21 @@ function MessageSender() {
             send your file
           </button>
         </form>
+      </div>
+
+      <div className="messageSender_bottom">
+        <div className="message_options">
+          <Videocam style={{ color: "red" }} />
+          <h3>Live Video</h3>
+        </div>
+        <div className="message_options">
+          <PhotoLibaray style={{ color: "green" }} />
+          <h3>Photo Video</h3>
+        </div>
+        <div className="message_options">
+          <InsertEmotion style={{ color: "orange" }} />
+          <h3>Feeling/Activity</h3>
+        </div>
       </div>
     </MessageSenderDiv>
   );
@@ -117,6 +135,7 @@ const MessageSenderDiv = styled.div`
         display: flex;
         align-items: center;
         padding: 10px;
+        cursor: pointer;
       }
 
       & > button {
@@ -125,6 +144,31 @@ const MessageSenderDiv = styled.div`
         border: none;
         padding: 10px;
         border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .messageSender_bottom {
+    display: flex;
+    justify-content: space-evenly;
+
+    & .message_options {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      color: gray;
+      margin: 5px;
+
+      & h3 {
+        font-size: medium;
+        margin-left: 10px;
+      }
+
+      &:hover {
+        background-color: #eff2f5;
+        border-radius: 20px;
+        cursor: pointer;
       }
     }
   }

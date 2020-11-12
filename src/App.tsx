@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/SideBar/Sidebar";
 import Feed from "./components/Feed/Feed";
 import styled from "styled-components";
+import Widget from "./components/Widget/Widget";
 
 function App() {
   return (
@@ -11,9 +12,8 @@ function App() {
       <MiddleDiv>
         <Sidebar />
         <Feed />
+        <Widget />
       </MiddleDiv>
-
-      {/* widgets */}
     </div>
   );
 }
